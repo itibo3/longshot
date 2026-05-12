@@ -1,0 +1,11 @@
+node_modules/
+npm-debug.log*
+.env
+.DS_Store
+*.log
+backup_phase0/
+backup_ui_v0.1/
+public/images/_backup_original/
+HANDOVER.md
+longshot_spec.md
+UI_IMPLEMENTATION_REPORT.md

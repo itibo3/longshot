@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>LONGSHOT — ブラフカードゲーム</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ========== ロビー画面 ========== -->
+    <div id="lobby" class="screen active">
+        <div class="lobby-container">
+            <h1 class="title">LONGSHOT</h1>
+            <p class="subtitle">分の悪い賭けに、全てを懸けろ。</p>
+
+            <div class="input-group">
+                <input type="text" id="playerName" placeholder="名前（省略可）" maxlength="10" autocomplete="off">
+            </div>
+
+            <div class="lobby-buttons">
+                <button id="btnCreate" class="btn btn-primary">ルームを作成</button>
+                <button id="btnSolo" class="btn btn-solo">CPU対戦</button>
+                <div class="divider">or</div>
+                <div class="join-group">
+                    <input type="text" id="roomCodeInput" placeholder="ルームコード" maxlength="4" autocomplete="off"
+                        style="text-transform: uppercase">
+                    <button id="btnJoin" class="btn btn-secondary">参加</button>
+                </div>
+            </div>
+
+            <p id="lobbyError" class="error-text"></p>
+        </div>
+    </div>
+
+    <!-- ========== 待機画面 ========== -->
+    <div id="waiting" class="screen">
+        <div class="waiting-container">
+            <h2>ルーム: <span id="roomCodeDisplay" class="room-code"></span></h2>
+            <p class="waiting-text">プレイヤーを待っています…</p>
+            <div id="playerList" class="player-list">
+                <!-- player items will be injected here by game.js -->
+            </div>
+            <button id="btnStart" class="btn btn-primary" style="display:none">ゲーム開始</button>
+        </div>
+    </div>
+
+    <!-- ========== イカサマステータス（ライフバーの上） ========== -->
+    <div id="cheatStatus" class="cheat-status"></div>
+
+    <!-- ========== 自分のライフ（右下固定） ========== -->
+    <div id="lifeBar" class="life-bar"></div>
+
+    <!-- ========== CANCELポップアップ（画面中央） ========== -->
+    <div id="cancelPopup" class="cancel-popup" style="display:none">
+        <span>🃏 CANCELできます！</span>
+        <button id="btnCloseCancelPopup" class="cancel-popup-close">✕</button>
+    </div>
+
+    <!-- ========== ゲーム画面 ========== -->
+    <div id="game" class="screen">
+        <!-- 対戦相手エリア（立ち絵） -->
+        <div id="opponentsArea" class="opponents-area"></div>
+
+        <!-- ゲームログ -->
+        <div id="gameLog" class="game-log"></div>
+
+        <!-- 場 -->
+        <div id="field" class="field">
+            <div id="fieldCard" class="card card-back">?</div>
+            <p id="declaration" class="declaration"></p>
+            <p id="turnInfo" class="turn-info"></p>
+        </div>
+
+        <!-- アクションエリア -->
+        <div id="actions" class="actions">
+            <!-- 宣言モード -->
+            <div id="declareActions" class="action-group" style="display:none">
+                <p class="action-label">宣言する数字:</p>
+                <div id="declareNumbers" class="number-select"></div>
+                <button id="btnDeclare" class="btn btn-primary" disabled>出す</button>
+                <button id="btnPhantomPlay" class="btn btn-cheat btn-cheat-inline" style="display:none" title="PHANTOMを使って出す">🃏 PHANTOM</button>
+            </div>
+
+            <!-- 応答モード -->
+            <div id="respondActions" class="action-group" style="display:none">
+                <button id="btnBelieve" class="btn btn-believe">信じる</button>
+                <button id="btnDoubt" class="btn btn-doubt">疑う</button>
+            </div>
+
+            <!-- 待機表示 -->
+            <div id="waitingAction" class="action-group" style="display:none">
+                <p class="waiting-label">相手のターンです…</p>
+            </div>
+        </div>
+
+        <!-- イカサマ（旧・非表示） -->
+        <div id="cheatArea" class="cheat-area" style="display:none">
+            <button id="btnCheat" class="btn btn-cheat" title="イカサマを使う">🃏 <span id="cheatLabel"></span></button>
+        </div>
+
+        <!-- 手札 -->
+        <div id="hand" class="hand"></div>
+
+        <!-- デッキ情報 -->
+        <div id="deckInfo" class="deck-info"></div>
+    </div>
+
+    <!-- ========== 結果画面（オーバーレイ） ========== -->
+    <div id="resultOverlay" class="overlay" style="display:none">
+        <div class="result-container">
+            <h2 id="resultTitle" class="result-title"></h2>
+            <p id="resultSub" class="result-sub"></p>
+            <button id="btnRematch" class="btn btn-primary">もう1回</button>
+            <button id="btnBackToLobby" class="btn btn-secondary">ロビーに戻る</button>
+        </div>
+    </div>
+
+    <!-- ========== ロングショット演出オーバーレイ ========== -->
+    <div id="longshotOverlay" class="longshot-overlay" style="display:none">
+        <button id="btnCloseLongshot" class="longshot-close">✕</button>
+        <div class="longshot-text">★ LONGSHOT ★</div>
+        <div class="longshot-sub">嘘が、真実になった。</div>
+    </div>
+
+    <!-- ========== 判定演出 ========== -->
+    <div id="judgeOverlay" class="judge-overlay" style="display:none">
+        <div id="judgeText" class="judge-text"></div>
+    </div>
+
+    <!-- ========== カウントダウン ========== -->
+    <div id="countdownOverlay" class="countdown-overlay" style="display:none">
+        <div id="countdownNumber" class="countdown-number"></div>
+    </div>
+
+    <!-- ========== サウンドトグルボタン ========== -->
+    <button id="btnMute" class="btn-mute" title="サウンドのON/OFF">🔊</button>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="game.js"></script>
+</body>
+
+</html>

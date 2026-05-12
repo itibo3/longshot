@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LONGSHOT - Character Expression Viewer</title>
+    <style>
+        :root {
+            --bg-dark: #1a1a1a;
+            --bg-card: #2d2d2d;
+            --text-main: #f0f0f0;
+            --accent: #d4af37;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--accent);
+            margin-bottom: 40px;
+        }
+
+        .characters-container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .character-row {
+            background-color: var(--bg-card);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .character-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #444;
+        }
+
+        .character-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent);
+            margin: 0;
+        }
+
+        .character-desc {
+            margin-left: 15px;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        .expressions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .expression-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #222;
+            padding: 10px;
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+
+        .expression-item:hover {
+            transform: translateY(-5px);
+            background: #333;
+        }
+
+        .expression-img {
+            width: 100%;
+            max-width: 250px;
+            border-radius: 8px;
+            background: #fff;
+            /* White bg for character contrast if they have transparency, otherwise just a frame */
+            margin-bottom: 10px;
+        }
+
+        .expression-label {
+            font-weight: bold;
+            color: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>LONGSHOT Character Viewer</h1>
+
+    <div class="characters-container">
+        <!-- CPU-α -->
+        <div class="character-row">
+            <div class="character-header">
+                <h2 class="character-name">CPU-α (Alpha)</h2>
+                <span class="character-desc">クールな銀髪ゴシック。計算高いブラフプレイヤー</span>
+            </div>
+            <div class="expressions-grid">
+                <div class="expression-item">
+                    <img src="images/alpha_normal.png" class="expression-img" alt="Normal">
+                    <span class="expression-label">通常 (Normal)</span>
+                </div>
+                <div class="expression-item">
+                    <img src="images/alpha_doubt.png" class="expression-img" alt="Doubt">
+                    <span class="expression-label">疑い (Doubt)</span>
+                </div>
+                <div class="expression-item">
+                    <img src="images/alpha_smug.png" class="expression-img" alt="Smug">
+                    <span class="expression-label">ドヤ顔 (Smug)</span>
+                </div>
+                <div class="expression-item">
+                    <img src="images/alpha_shock.png" class="expression-img" alt="Shock">
+                    <span class="expression-label">驚き (Shock)</span>
+                </div>
+                <div class="expression-item">
+                    <img src="images/alpha_defeat.png" class="expression-img" alt="Defeat">
+                    <span class="expression-label">敗北 (Defeat)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- CPU-β -->
+        <div class="character-row">
+            <div class="character-header">
+                <h2 class="character-name">CPU-β (Beta)</h2>
+                <span class="character-desc">ピンク髪チャイナ。陽気で挑発的なプレイスタイル</span>
+            </div>
+            <div class="expressions-grid">
+                <div class="expression-item">
+                    <img src="images/beta_normal.png" class="expression-img" alt="Normal">
+                    <span class="expression-label">通常 (Normal)</span>
+                </div>
+                <div class="expression-item">
+                    <img src="images/beta_doubt.png" class="expression-img" alt="Doubt">
+                    <span class="expression-label">疑い (Doubt)</span>
+                </div>
+                <div class="expression-item">
+                    <img src="images/beta_smug.png" class="expression-img" alt="Smug">
+                    <span class="expression-label">ドヤ顔 (Smug)</span>
+                </div>
+                <div class="expression-item">
+                    <img src="images/beta_shock.png" class="expression-img" alt="Shock">
+                    <span class="expression-label">驚き (Shock)</span>
+                </div>
+                <div class="expression-item">
+                    <img src="images/beta_defeat.png" class="expression-img" alt="Defeat">
+                    <span class="expression-label">敗北 (Defeat)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- CPU-γ -->
+        <div class="character-row">
+            <div class="character-header">
+                <h2 class="character-name">CPU-γ (Gamma)</h2>
+                <span class="character-desc">白狐耳パーカー。ミステリアスで読めない強敵</span>
+            </div>
+            <div class="expressions-grid">
+                <div class="expression-item">
+                    <img src="images/gamma_normal.png" class="expression-img" alt="Normal">
+                    <span class="expression-label">通常 (Normal)</span>
+                </div>
+                <div class="expression-item">
+                    <img src="images/gamma_doubt.png" class="expression-img" alt="Doubt">
+                    <span class="expression-label">疑い (Doubt)</span>
+                </div>
+                <div class="expression-item">
+                    <img src="images/gamma_smug.png" class="expression-img" alt="Smug">
+                    <span class="expression-label">ドヤ顔 (Smug)</span>
+                </div>
+                <div class="expression-item">
+                    <img src="images/gamma_shock.png" class="expression-img" alt="Shock">
+                    <span class="expression-label">驚き (Shock)</span>
+                </div>
+                <div class="expression-item">
+                    <img src="images/gamma_defeat.png" class="expression-img" alt="Defeat">
+                    <span class="expression-label">敗北 (Defeat)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
