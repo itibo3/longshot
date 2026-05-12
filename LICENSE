@@ -1,21 +1,37 @@
-MIT License
+LONGSHOT — 著作権表示・利用条件
 
-Copyright (c) 2026 EidosFrontier
+Copyright (c) 2026 EidosFrontier. All Rights Reserved.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+本リポジトリに含まれるソースコード、ドキュメント、画像・音声その他の素材（以下「本ソフトウェア」）の著作権その他の知的財産権は、特段の記載がない限り EidosFrontier に帰属します。
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+次の行為は、EidosFrontier の事前の書面による承諾なく行うことを禁止します。
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+- 本ソフトウェアの全部または一部の複製、翻案、改変、結合
+- 本ソフトウェアの全部または一部の頒布、公衆送信、譲渡、貸与、再ライセンス
+- 本ソフトウェアを利用した商用サービスの提供、第三者への組み込み
+- 上記に準ずる利用であっても、権利者の許可なく「自由に使える」ものとして扱うこと
+
+GitHub 上でコードが閲覧できることは、上記の禁止に反しない範囲での参照を許すものであり、無断利用を許諾するものではありません。
+
+権利者が別途書面で許可した場合は、その条件が優先します。
+
+---
+
+LONGSHOT — Copyright notice and terms of use
+
+Copyright (c) 2026 EidosFrontier. All rights reserved.
+
+All intellectual property rights in this repository, including but not limited to source code, documentation, images, and audio (the “Software”), vest in EidosFrontier unless otherwise stated.
+
+Without EidosFrontier’s prior written permission, you may not:
+
+- copy, adapt, modify, merge, or create derivative works of the Software;
+- distribute, publish, transfer, lend, sublicense, or otherwise make the Software available to third parties;
+- use the Software in commercial services or embed it in products for third parties;
+- treat the Software as freely usable without explicit written consent.
+
+Availability of the Software on GitHub permits viewing only to the extent consistent with the foregoing and does not grant a license for unauthorized use.
+
+Any separate written agreement from the rights holder prevails.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND.

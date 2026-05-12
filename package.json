@@ -8,7 +8,7 @@
         "dev": "node server.js"
     },
     "author": "EidosFrontier",
-    "license": "MIT",
+    "license": "UNLICENSED",
     "dependencies": {
         "express": "^4.18.2",
         "socket.io": "^4.7.4"
