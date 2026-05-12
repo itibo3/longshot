@@ -4,14 +4,33 @@ Copyright (c) 2026 EidosFrontier. All Rights Reserved.
 
 本リポジトリに含まれるソースコード、ドキュメント、画像・音声その他の素材（以下「本ソフトウェア」）の著作権その他の知的財産権は、特段の記載がない限り EidosFrontier に帰属します。
 
+## 許諾される利用（個人・非商用の「遊ぶだけ」）
+
+次をすべて満たす場合、EidosFrontier の追加の書面によらず、本ソフトウェアを利用できます。
+
+- 営利目的でないこと
+- 本ソフトウェア（または改変物）を、権利者の承諾なく第三者へ再配布したり、公に再掲載したりしないこと
+
+この範囲で許される行為の例:
+
+- 自身のコンピュータ環境に本リポジトリを clone 等により取得し、README の手順に従いビルド・実行してゲームとしてプレイまたは試用・評価すること（ポートフォリオを見た人による試遊を含む）
+- 上記の実行に伴い、依存パッケージの取得など通常に必要な複製を行うこと
+- 友人など特定の相手を、あなたが管理するマシン上で起動したサーバや、同一の私的なネットワーク内に限り接続させて対戦に参加させること
+
+次はこの許諾の範囲に含まれません（別途書面による承諾が必要です）。
+
+- 不特定または多数の利用者向けに本ソフトウェアを常時公開する運用、第三者が自由に利用できる形でのホスティング
+- 改変したソースや派生物を、承諾なく公開リポジトリ等へ掲載すること
+
+## 禁止事項（上記の許諾を除く）
+
 次の行為は、EidosFrontier の事前の書面による承諾なく行うことを禁止します。
 
-- 本ソフトウェアの全部または一部の複製、翻案、改変、結合
-- 本ソフトウェアの全部または一部の頒布、公衆送信、譲渡、貸与、再ライセンス
-- 本ソフトウェアを利用した商用サービスの提供、第三者への組み込み
-- 上記に準ずる利用であっても、権利者の許可なく「自由に使える」ものとして扱うこと
+- 許諾範囲を超えた本ソフトウェアの全部または一部の頒布、公衆送信、譲渡、貸与、再ライセンス
+- 本ソフトウェアを利用した商用サービスの提供、第三者向けプロダクトへの組み込み（上記の私的な試遊の範囲を超えるもの）
+- 権利者の許可なく「自由に使えるオープンソースのように」扱うこと
 
-GitHub 上でコードが閲覧できることは、上記の禁止に反しない範囲での参照を許すものであり、無断利用を許諾するものではありません。
+GitHub 上でコードが閲覧できることは、上記に反しない範囲での参照を許すものであり、許諾範囲外の利用を黙示的に許諾するものではありません。
 
 権利者が別途書面で許可した場合は、その条件が優先します。
 
@@ -23,14 +42,33 @@ Copyright (c) 2026 EidosFrontier. All rights reserved.
 
 All intellectual property rights in this repository, including but not limited to source code, documentation, images, and audio (the “Software”), vest in EidosFrontier unless otherwise stated.
 
+## Permitted use (personal, non‑commercial play)
+
+You may use the Software without additional written permission from EidosFrontier if all of the following are true:
+
+- your use is not for profit; and
+- you do not redistribute or publicly republish the Software (or your modifications) without the rights holder’s consent.
+
+Examples of permitted use include:
+
+- cloning or otherwise obtaining this repository onto computers you control, then building and running it as described in the README to play, try, or evaluate the game (including visitors reviewing a portfolio who want to try it);
+- reproduction strictly necessary for that purpose (such as installing dependencies); and
+- letting specific friends connect only to a server you run on your own machine, or within the same private network, for multiplayer.
+
+The following are **not** covered by this permission (separate written consent is required):
+
+- operating the Software as an always‑on service for the general public, or hosting it so unspecified third parties can freely use it;
+- publishing modified source or derivative works to a public repository without consent.
+
+## Prohibited conduct (except as permitted above)
+
 Without EidosFrontier’s prior written permission, you may not:
 
-- copy, adapt, modify, merge, or create derivative works of the Software;
-- distribute, publish, transfer, lend, sublicense, or otherwise make the Software available to third parties;
-- use the Software in commercial services or embed it in products for third parties;
-- treat the Software as freely usable without explicit written consent.
+- distribute, publish, transfer, lend, sublicense, or otherwise make the Software available beyond the permitted scope;
+- use the Software in commercial services or embed it in products for third parties (beyond private trial/play as described above); or
+- treat the Software as freely reusable like open source without explicit consent.
 
-Availability of the Software on GitHub permits viewing only to the extent consistent with the foregoing and does not grant a license for unauthorized use.
+Availability of the Software on GitHub permits viewing only to the extent consistent with the foregoing and does not imply consent for uses outside the permitted scope.
 
 Any separate written agreement from the rights holder prevails.
 
